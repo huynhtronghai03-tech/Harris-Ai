@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>617</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ============================================= */
+/*   STYLESHEET DARK MODERN - BUTTON ĐỒNG BỘ   */
+/* ============================================= */
+
+QMainWindow, QDialog, QWidget, QWidget#centralWidget, QWidget#widget {
+    background-color: #0F0F0F !important;
+}
+
+/* ====================== LABEL ====================== */
+QLabel {
+    color: #E0E0E0;
+    font-family: &quot;Segoe UI&quot;, &quot;Roboto&quot;, Arial, sans-serif;
+}
+
+QLabel#lblTitle {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -1px;
+}
+
+QLabel#lblQuestion {
+    color: #00D4FF;
+    font-size: 14.5px;
+}
+
+/* ====================== LINE EDIT ====================== */
+QLineEdit {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    border: 2px solid #3A3A3A;
+    border-radius: 12px;
+    padding: 13px 16px;
+    font-size: 15px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #00D4FF;
+    background-color: #222222;
+}
+
+/* ====================== BUTTON ====================== */
+QPushButton {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+/* Nút chính (Đăng Nhập và Đăng Ký) - CÙNG MÀU */
+QPushButton#btnLogin,
+QPushButton#btnSignUp,
+QPushButton#btnRegister {
+    background-color: #00D4FF;
+    color: #0F0F0F;
+}
+
+QPushButton#btnLogin:hover,
+QPushButton#btnSignUp:hover,
+QPushButton#btnRegister:hover {
+    background-color: #00F0FF;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.35);
+}
+
+QPushButton#btnLogin:pressed,
+QPushButton#btnSignUp:pressed,
+QPushButton#btnRegister:pressed {
+    background-color: #00B8D9;
+    transform: translateY(1px);
+}
+
+/* Nếu có nút phụ (ví dụ nút &quot;Đăng Nhập&quot; ở trang đăng ký) */
+QPushButton#btnLoginSecondary {   /* nếu mày đặt tên khác thì đổi lại */
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #00D4FF;
+}
+
+QPushButton#btnLoginSecondary:hover {
+    background-color: #00D4FF;
+    color: #0F0F0F;
+}
+
+/* ====================== CHECKBOX ====================== */
+QCheckBox {
+    color: #CCCCCC;
+    font-size: 14px;
+    spacing: 10px;
+}
+
+QCheckBox::indicator {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #555555;
+    border-radius: 6px;
+    background-color: #1A1A1A;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #00D4FF;
+    border: 2px solid #00D4FF;
+}
+/* ====================== MESSAGE BOX ====================== */
+QMessageBox {
+    background-color: #0F0F0F;
+}
+
+QMessageBox QLabel {
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+QMessageBox QPushButton {
+    background-color: #FFFFFF;
+    color: #0F0F0F;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 24px;
+    min-width: 70px;
+    font-weight: 700;
+}
+
+QMessageBox QPushButton:hover {
+    background-color: #E0E0E0;
+}
+
+QMessageBox QPushButton:pressed {
+    background-color: #CCCCCC;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="lblTitle">
+         <property name="font">
+          <font>
+           <family>Segoe UI,Roboto,Arial,sans-serif</family>
+           <pointsize>-1</pointsize>
+           <weight>87</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Đ Ă N G  K Í</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLineEdit" name="txtEmail">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="placeholderText">
+             <string> Email / Phone number...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtPassword">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string> Password...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtPassword1">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Confirm password...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLogin">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <weight>87</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Đ Ă N G  N H Ậ P</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSignUp">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <weight>87</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>T Ạ O  T À I   K H O Ả N</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
